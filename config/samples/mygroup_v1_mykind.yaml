@@ -1,0 +1,13 @@
+apiVersion: mygroup.ips.com.cn/v1
+kind: Mykind
+metadata:
+  name: mykind-sample
+spec:
+  # Add fields here
+  replicas: 1                    # <integer> Pod副本期待数量
+  image: mysql:5.7               # <string> image版本   
+  port: 3306                     # <integer> mysql port
+  nodeport: 30306                # <integer> mysql port for outside
+  envs:                           # <object> 写入到容器内的环境变量，此格式主要为了复用api中已有数据结构,,也可以分开定义
+    - name: MYSQL_ROOT_PASSWORD  # <string> mysql的root密码的变量
+      value: "123456"            # <string> 密码内容

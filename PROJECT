@@ -1,0 +1,7 @@
+domain: ips.com.cn
+repo: K8S-CRD-Demo
+resources:
+- group: mygroup
+  kind: Mykind
+  version: v1
+version: "2"
